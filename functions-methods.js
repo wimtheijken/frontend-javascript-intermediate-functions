@@ -57,8 +57,8 @@ console.log(typeOfEmail("t.mellink@novi.nl"))
 function checkEmailValidity(email) {
     const at = email.includes("@") // controleerd of er een "@" in het emailadres voorkomt (true is goed)
     const comma = email.includes(",") // controleerd of er een "," in het emailadres voorkomt (false is goed)
-    const point = (email.lastIndexOf(".") + 1 === email.length ? true : false) // controleerd of er een "." op het einde staat (false is goed)
-    return (at && !comma && !point ? true : false)
+    const point = email.lastIndexOf(".") + 1 === email.length // controleerd of er een "." op het einde staat (false is goed)
+    return at && !comma && !point
 }
 
 console.log(checkEmailValidity("tessmellink@novi,nl"))
