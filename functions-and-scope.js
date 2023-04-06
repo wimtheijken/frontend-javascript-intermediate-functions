@@ -58,13 +58,11 @@ console.log(cumLaude([8, 9, 4, 6, 10]))
 // ---- Verwachte uitkomst: 6.642857142857143
 
 function averageGrade(grades) {
-    let studentCount = 0
     let gradesCount = 0
     for (let i = 0; i < grades.length; i++) {
-        studentCount++
-        gradesCount = gradesCount + grades[i]
+        gradesCount += grades[i]
     }
-    return gradesCount / studentCount
+    return gradesCount / grades.length
 }
 
 console.log(averageGrade(grades))
@@ -104,7 +102,7 @@ console.log(Math.round(averageGrade(grades) * 100) / 100)
 // ---- Verwachte uitkomst: 9
 
 function highestGrade(grades) {
-    let highGrade = 0
+    let highGrade = grades[0]
     for (let i = 0; i < grades.length; i++) {
         if (highGrade < grades[i]) {
             highGrade = grades[i]
